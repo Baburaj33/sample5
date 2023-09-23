@@ -1,0 +1,484 @@
+/* import Google font Link //poppins */
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Jost:ital,wght@0,700;1,300&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;1,500&family=Space+Grotesk:wght@700&display=swap');
+
+/* global selector */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* html */
+html {
+    scroll-behavior: smooth;
+    overflow-y: mandatory;
+    overflow-x: hidden;
+}
+/* root  variable*/
+:root {
+    --primaray-color: #fff;
+    --secondary-color: #000;
+}
+#wrapper {
+    background: url('../img/html-css-collage-concept-with-person.jpg');
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+}
+#wrapper::before {
+    content: '';
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.90), rgba(32, 40, 119, 0.90), rgba(32, 40, 119, 0.90));
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+
+}
+nav ul {
+    list-style: none;
+    display: none;
+    cursor: pointer;
+    transition: 0.6s;
+    position: relative;
+    right: -100%;
+    transition: 0.5s;
+    border-radius: 15px;
+    transition: 0.5s ease-in-out;
+
+}
+
+/* nav show start*/
+/* nav show end */
+
+.logo a {
+    color: yellow;
+    font-weight: 400;
+    overflow-x:hidden ;
+}
+
+nav li {
+    padding: 10px 15px;
+    display: flex;
+    align-self: self-start;
+}
+
+nav a {
+    color: #fff;
+}
+nav {
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.90), rgba(32, 40, 119, 0.90), rgba(32, 40, 119, 0.90));
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15%;
+    animation: nav;
+    animation-duration: 0.4s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+
+}
+/* menu icon*/
+#menu{
+    cursor: pointer;
+    color: #fff;
+}
+/* home img */
+/* default image */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* homeImg */
+.homeImg {
+    width: 100%;
+    margin-top: 50%;
+
+}
+.homeImg svg {
+    width: 300px;
+}
+
+/* home Title */
+/* homeTitle */
+.homeTitle{
+    color: #fff;
+    position: relative;
+    top: 20vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+/* homeSocialmedia */
+.homeSocialmedia {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    margin-left: 10px;
+    position: relative;
+    bottom: 70px;
+}
+
+.homeSocialmedia a {
+    width: fit-content;
+    padding: 10px 5px;
+    color: #fff;
+}
+.fa-linkedin:hover{
+    color: blue;
+    transition: 0.6s ease-in-out;
+}
+.fa-facebook:hover{
+    color: blue;
+    transition: 0.6s ease-in-out;
+}
+.fa-instagram:hover{
+    color: palevioletred;
+    transition: 0.6s ease-in-out;
+}
+.fa-github:hover{
+    color:black;
+    transition: 0.6s ease-in-out;
+}
+@keyframes downAbout{
+    0%{
+        transform: translateY(1px);
+        transition: 0.5s ease-in-out;
+    }
+    50%
+    {
+        transform: translateY(4px);
+        transition: 0.5s ease-in-out;
+    }
+    100%{
+        transform: translateY(-2px);
+        transition: 0.5s ease-in-out;
+    }
+}
+/* home section end */
+
+
+/* about Section */
+#about {
+    height: 200vh;
+}
+.sectionTitle {
+    text-align: center;
+    color: var(--secondary-color);
+}
+.aboutData {
+    position: relative;
+    top: 60px;
+}
+.aboutPara {
+    text-align: justify;
+    letter-spacing: 1;
+    padding: 0px 10px;
+}
+.aboutMentor,
+.about-online-class {
+    padding: 10px 0;
+    position: relative;
+}
+.aboutMentor svg,
+.about-online-class svg {
+    width: 250px;
+    margin-left: 30px;
+    margin-top: 14px;
+}
+/* teacherSocialMedia */
+.teacherSocialMedia{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    top:45%;  
+}
+.teacherSocialMedia i{
+    margin-bottom: 15px;
+}
+.fa-linkedin{
+    color: blue;
+}
+.fa-facebook{
+    color: blueviolet;
+}
+.fa-instagram{
+    color: palevioletred;
+}
+.fa-github{
+    color: black;
+}
+.mentorpara {
+    padding: 10px 0;
+    text-align: center;
+}
+.experiencewith {
+    padding: 5px 0;
+    margin-top: 10px;
+}
+.experiencewith i{
+    margin-right: 10px;
+}
+.fa-html5 {
+    color: orange;
+}
+
+.fa-css3 {
+    color: blue;
+}
+
+.fa-square-js {
+    color: yellow;
+}
+
+.fa-react {
+    color: skyblue;
+}
+.mentorpara span {
+    color: green;
+}
+.democlass{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+    margin-bottom: 30px;
+}
+/* CourseReigister */
+.CourseReigister{
+    animation: pulse 1.8s infinite;
+    border-radius: 15%;
+    padding: 0 5px;
+}
+.fa-video{
+    color: blue;
+}
+.fa-youtube{
+    color: red;
+}
+.fa-google-drive{
+    color: green;
+}
+
+.fa-video:hover{
+    color: blue;
+}
+.fa-youtube:hover{
+    color:red;
+}
+
+.fa-globe{
+    color: blueviolet;
+}
+
+.demoClass {
+    position: relative;
+    bottom: 25px;
+}
+/* OnlineSocialMedia */
+.OnlineSocialMedia{
+    text-align: center;
+    background-color: red;
+}
+#OnlineSocialMedia{
+    margin-bottom: 150px;
+}
+/* about section end */
+
+/* course section start */
+/*  */
+.course{
+    height: 270vh;
+}
+.courseTitlte{
+    margin-bottom: 20px;
+}
+.courseData {
+    position: relative;
+    top: 90px;
+    /* bottom: 40vh; */
+}
+.PythonCourse {
+    background-color: rgb(255,255,255,0.3);
+    padding: 15px 5px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    animation: pulse 1.8s infinite;
+    width:300px;
+    margin: auto;
+}
+/* python course */
+.pythonLogo {
+    font-size: 50px;
+    text-align: center;
+}
+.courseName {
+    text-align: center;
+}
+.courseDetails {
+    padding: 10px 10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.courserating {
+    color: orange;
+    padding: 15px 0%;
+    text-align: center;
+    font-weight: 600;
+}
+.courseRating{
+    color: red;
+    font-weight: 600;
+}
+.courserating span {
+    color: #fff;
+    margin-left: 5px;
+}
+.courseType {
+    text-align: center;
+}
+
+.courseEntroll {
+    text-align: center;
+    align-items: center;
+    color: green;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+/* courses end */
+
+/* Gallery section start */
+.gallery{
+    height: 100vh;    
+}
+.gallery-img-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+.showGallagery{
+    border: 0.8px solid black;
+    outline: none;
+    font-size: 15px;
+    color:black;
+    border-radius: 15%;
+}
+/* galleryImg */
+.galleryImg{
+    border-radius: 15%;
+    width: 200px;
+    height: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Gallery section End */
+
+/* contact section start */
+.contact{
+    height: 90vh;
+}
+.contactContainer{
+    /* background-color: red; */
+    position: relative;
+    top: 15vh;
+}
+.contactinput{
+    margin-top: 30px;
+    margin-left: 30px;
+    
+
+}
+.ContactINPUT{
+    margin-left: 50px;
+}
+.contactInput,
+.contactFeedback{
+    margin-bottom: 20px;
+    padding: 7px 10px;
+    width: 70%;
+    border-radius: 15px;
+    border: 0.8px solid black;
+    outline: none;
+}
+#contactsend{
+    border: none;
+    outline: none;
+    background-color: blue;
+    padding: 5px 10px;
+    border-radius: 15%;
+    color: #ffffff;
+    position:absolute;
+    left:180px; 
+    bottom: 30px;  
+}
+
+/* contact section End */
+
+/* footer start */
+.footer {
+    height:40vh;
+    background-color: rgb(22, 22, 163);
+}
+
+.footerTitle{
+    color: #ffff;
+    padding: 10px 10px;
+    font-size: 20px;
+}
+/* footersocialheading */
+.footersocialheading{
+    color: yellow;
+    padding: 10px 0;
+}
+
+/* footerSocialIcon */
+.footerSocialIcon {
+    list-style: none;
+    position: relative;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footerSocialIcon a{
+    color: white;
+    margin-bottom: 5px;
+
+}
+/* contactby */
+.contactby{
+    position: relative;
+    top: 20px;
+    color: #ffff;
+  
+}
+
+/* footer end */

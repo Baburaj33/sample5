@@ -1,0 +1,16 @@
+/* tamil color change */
+@keyframes change{
+    10%{
+        color: orange;
+    }
+    20%{
+        color: white;
+    }
+    60%{
+        color: green;
+    }
+    100%{
+        color:linear-gradient(to bottom, #FF9933, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+
+    }
+}
